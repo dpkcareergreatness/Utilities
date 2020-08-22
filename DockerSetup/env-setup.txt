@@ -1,0 +1,9 @@
+#SYSROOT=/sysroot
+#KERNELDIR=/sysroot/usr/src/linux-headers-4.15.0-47-generic
+KERNELDIR=/usr/src/linux-headers-4.15.0-72-generic
+DEBUG=1
+# Output goes here (mapped in volume)
+OUT=/output
+LC_ALL=en_US.UTF-8
+LANG=en_US.UTF-8
+LANGUAGE=en_US.UTF-8
