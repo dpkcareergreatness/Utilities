@@ -13,3 +13,5 @@ https://www.docker.com/
 2. Then run build.sh
 3. Now edit the run.sh to change your volumes mounted (-v), startup directory (-w)
 4. It will now run the script and change the current directory to the one mentioned by -w
+
+The given example is for building a yocto image inside docker
