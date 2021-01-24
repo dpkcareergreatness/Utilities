@@ -57,7 +57,7 @@ for i in range(len(all_hosts)):
         continue
     else:
         arp_out = subprocess.Popen(['arp', '-a', str(all_hosts[i])], stdout=subprocess.PIPE).communicate()[0]
-        if mac_addr in arp_out.decode('utf-8'):
+        if ((mac_addr.lower() in arp_out.decode('utf-8')) or (mac_addr.upper() in arp_out.decode('utf-8'))):
             found_hardware = True
             print("MAC addr {} found in {}" .format(mac_addr, str(all_hosts[i])))
             user_input = input("Do you want to continue scan further (y/n)")
