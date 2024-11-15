@@ -1,0 +1,42 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "gdb",
+			"request": "attach",
+			"name": "Attach to gdbserver",
+			"executable": "/usr/bin/python3",
+			"target": "x.y.z.a:2345",
+			"remote": true,
+			"cwd": "${workspaceRoot}",
+			"valuesFormatting": "parseText"
+		},
+		{
+			"name": "Debug",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "exe full path",
+			"args": ["any args. if multiple separate with spaces or in separate quotes"],
+			"stopAtEntry": false,
+			"cwd": "${workspaceRoot}",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				{
+					"description":  "Set Disassembly Flavor to Intel",
+					"text": "-gdb-set disassembly-flavor intel",
+					"ignoreFailures": true
+				}
+			]
+		}
+	]
+}
