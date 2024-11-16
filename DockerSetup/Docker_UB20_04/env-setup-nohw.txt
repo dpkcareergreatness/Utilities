@@ -1,0 +1,16 @@
+EXCLUDED_APIS=opengl rogue2d opengles2 vulkan opencl
+PVR_BUILD_DIR=nohw_linux
+WINDOW_SYSTEM=nulldrmws
+KERNELDIR=/opt/linux-headers-5.15.37-pvr-1
+BUILD=release
+#RGX_BVNC=35.2.1632.23
+RGX_BVNC=35.3.408.35
+#RGX_BVNC=35.3.408.33
+
+OUT=/output
+#METAG_INST_ROOT=/opt/imgtec/metag/2.8
+RISCV_ELF_ROOT=/opt/imgtec/catapult-sdk_1.0.1
+
+PDUMP=1
+#SUPPORT_VALIDATION=1
+LLVM_BUILD_DIR=/llvm
