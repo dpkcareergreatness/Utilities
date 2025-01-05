@@ -9,9 +9,9 @@
   * And due to that no clashes with any other variable names
 
  * example: 
-  * #define MACRO(pred, descr) typedef char MSG##descr[(pred)?1:-1]
-  * MACRO(sizeof(int) == 4, IntSizeMustBe4);
-  * If sizeof(int) != 4, the typedef creates an array of size -1, causing a compile-time error with a message that includes MSGIntSizeMustBe4.
+  * #define COMPILE_TIME_ASSERT(pred, descr) typedef char MSG##descr[(pred)?1:-1]
+  * COMPILE_TIME_ASSERT(sizeof(int) == 4, IntSizeMustBe4);
+  * If sizeof(int) != 4, the typedef creates an array of size -1, causing a compile-time error with a message that includes ErrorMSGIntSizeMustBe4.
 */
 
-#define MACRO(pred, descr) typedef char MSG##descr[(pred) ? 1 : -1]
+#define COMPILE_TIME_ASSERT(pred, descr) typedef char EroorMSG##descr[(pred) ? 1 : -1]
